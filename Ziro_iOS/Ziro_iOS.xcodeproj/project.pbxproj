@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0F1771227ED12600C58D0C /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F1770227ED12600C58D0C /* Project.swift */; };
+		EB0F1773227ED40200C58D0C /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F1772227ED40200C58D0C /* ProjectsViewController.swift */; };
+		EB0F1775227EE90E00C58D0C /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F1774227EE90E00C58D0C /* ProjectDetailViewController.swift */; };
+		EB0F1777228016F900C58D0C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F1776228016F900C58D0C /* AccountViewController.swift */; };
+		EB0F17792280174700C58D0C /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F17782280174700C58D0C /* AccountInfo.swift */; };
 		EB1C074E223E750A008F1816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C074D223E750A008F1816 /* AppDelegate.swift */; };
-		EB1C0750223E750A008F1816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C074F223E750A008F1816 /* ViewController.swift */; };
+		EB1C0750223E750A008F1816 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1C074F223E750A008F1816 /* LoginViewController.swift */; };
 		EB1C0753223E750A008F1816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1C0751223E750A008F1816 /* Main.storyboard */; };
 		EB1C0755223E7510008F1816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1C0754223E7510008F1816 /* Assets.xcassets */; };
 		EB1C0758223E7510008F1816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1C0756223E7510008F1816 /* LaunchScreen.storyboard */; };
+		EB91C09C227C6A5C0022A788 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91C09B227C6A5C0022A788 /* TasksViewController.swift */; };
+		EB91F0532279A5D700D5B756 /* ZiroWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91F0522279A5D700D5B756 /* ZiroWeb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB0F1770227ED12600C58D0C /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		EB0F1772227ED40200C58D0C /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		EB0F1774227EE90E00C58D0C /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		EB0F1776228016F900C58D0C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		EB0F17782280174700C58D0C /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		EB1C074A223E750A008F1816 /* Ziro_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ziro_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1C074D223E750A008F1816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB1C074F223E750A008F1816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB1C074F223E750A008F1816 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB1C0752223E750A008F1816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB1C0754223E7510008F1816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB1C0757223E7510008F1816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB1C0759223E7510008F1816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB91C09B227C6A5C0022A788 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		EB91F0522279A5D700D5B756 /* ZiroWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiroWeb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				EB1C074D223E750A008F1816 /* AppDelegate.swift */,
-				EB1C074F223E750A008F1816 /* ViewController.swift */,
+				EB1C074F223E750A008F1816 /* LoginViewController.swift */,
 				EB1C0751223E750A008F1816 /* Main.storyboard */,
 				EB1C0754223E7510008F1816 /* Assets.xcassets */,
 				EB1C0756223E7510008F1816 /* LaunchScreen.storyboard */,
 				EB1C0759223E7510008F1816 /* Info.plist */,
+				EB91F0522279A5D700D5B756 /* ZiroWeb.swift */,
+				EB91C09B227C6A5C0022A788 /* TasksViewController.swift */,
+				EB0F1770227ED12600C58D0C /* Project.swift */,
+				EB0F1772227ED40200C58D0C /* ProjectsViewController.swift */,
+				EB0F1774227EE90E00C58D0C /* ProjectDetailViewController.swift */,
+				EB0F1776228016F900C58D0C /* AccountViewController.swift */,
+				EB0F17782280174700C58D0C /* AccountInfo.swift */,
 			);
 			path = Ziro_iOS;
 			sourceTree = "<group>";
@@ -135,8 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1C0750223E750A008F1816 /* ViewController.swift in Sources */,
+				EB0F1773227ED40200C58D0C /* ProjectsViewController.swift in Sources */,
+				EB91F0532279A5D700D5B756 /* ZiroWeb.swift in Sources */,
+				EB0F1777228016F900C58D0C /* AccountViewController.swift in Sources */,
+				EB91C09C227C6A5C0022A788 /* TasksViewController.swift in Sources */,
+				EB0F1775227EE90E00C58D0C /* ProjectDetailViewController.swift in Sources */,
+				EB1C0750223E750A008F1816 /* LoginViewController.swift in Sources */,
+				EB0F1771227ED12600C58D0C /* Project.swift in Sources */,
 				EB1C074E223E750A008F1816 /* AppDelegate.swift in Sources */,
+				EB0F17792280174700C58D0C /* AccountInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
