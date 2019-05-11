@@ -577,19 +577,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oen-ID-zi2">
-                                                    <rect key="frame" x="15" y="11" width="294.5" height="24"/>
+                                                    <rect key="frame" x="15" y="15" width="294.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-f1-mFd">
-                                                    <rect key="frame" x="309.5" y="11" width="50.5" height="24"/>
+                                                    <rect key="frame" x="309.5" y="15" width="50.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HBQ-VV-Erc">
-                                                    <rect key="frame" x="15" y="43" width="345" height="47"/>
+                                                    <rect key="frame" x="15" y="47" width="345" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -600,7 +600,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="HBQ-VV-Erc" secondAttribute="bottom" id="4W0-6X-ab7"/>
                                                 <constraint firstItem="HBQ-VV-Erc" firstAttribute="leading" secondItem="5eK-k7-dCD" secondAttribute="leadingMargin" id="8M3-Vw-NxM"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HBQ-VV-Erc" secondAttribute="trailing" id="ECY-os-bma"/>
-                                                <constraint firstItem="oen-ID-zi2" firstAttribute="top" secondItem="5eK-k7-dCD" secondAttribute="topMargin" id="HIV-gn-C6H"/>
+                                                <constraint firstItem="oen-ID-zi2" firstAttribute="top" secondItem="5eK-k7-dCD" secondAttribute="topMargin" constant="4" id="HIV-gn-C6H"/>
                                                 <constraint firstItem="jmJ-f1-mFd" firstAttribute="trailing" secondItem="5eK-k7-dCD" secondAttribute="trailingMargin" id="I9j-Vr-Hrs"/>
                                                 <constraint firstItem="HBQ-VV-Erc" firstAttribute="top" secondItem="oen-ID-zi2" secondAttribute="bottom" constant="8" id="ICm-zT-T3z"/>
                                                 <constraint firstItem="oen-ID-zi2" firstAttribute="leading" secondItem="5eK-k7-dCD" secondAttribute="leadingMargin" id="UuB-oh-3q0"/>
@@ -631,6 +631,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="navBar" destination="nZJ-eJ-8vy" id="kT2-Ll-y2u"/>
+                        <outlet property="tableView" destination="5gX-Am-tdF" id="D43-AZ-3kc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-py-Vk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -891,14 +892,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Кол-во изменений" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SJo-z2-Won">
-                                                    <rect key="frame" x="16" y="12" width="149.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="12" width="149.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hkf-Zv-Oe5">
-                                                    <rect key="frame" x="315" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -922,7 +923,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Назад" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pg9-jv-Cjv">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

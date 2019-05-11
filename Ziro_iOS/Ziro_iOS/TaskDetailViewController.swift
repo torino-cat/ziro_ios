@@ -68,6 +68,7 @@ class TaskDetailViewController: UITableViewController {
             vc.logs = self.logs
         } else if segue.identifier == "Comments",
             let vc = segue.destination as? CommentsViewController {
+            vc.taskId = self.taskId
             vc.comments = self.comments
         }
     }

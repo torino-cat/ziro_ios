@@ -11,19 +11,45 @@ import UIKit
 class CommentsViewController: UIViewController {
 
     var comments: [Comment]!
+    var taskId: String!
+    let ziroWeb = ZiroWeb()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let closeButton = UIBarButtonItem(title: "Назад",  style: .plain, target: self, action: #selector(close))
-        let addButton = UIBarButtonItem(title: "Добавить",  style: .plain, target: self, action: #selector(close))
+        let addButton = UIBarButtonItem(title: "Добавить",  style: .plain, target: self, action: #selector(add))
         navBar.leftBarButtonItem = addButton
         navBar.rightBarButtonItem = closeButton
     }
     
     @objc func close() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func add() {
+        let alert = UIAlertController(title: "Добавить комментарий", message: "Введите комментарий", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Сохранить", style: .default, handler: { _ in
+            guard let text = alert.textFields?[0].text, text.count > 0 else {
+                self.handle(errors: ["Комментарий не должен быть пустым"])
+                return
+            }
+            self.ziroWeb.addComment(for: self.taskId, withText: text, withCompletion: { (success, errors, comment) in
+                if success, let comment = comment {
+                    self.comments.insert(comment, at: 0)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } else if let errors = errors {
+                    self.handle(errors: errors)
+                }
+            })
+        }))
+        alert.addTextField(configurationHandler: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 

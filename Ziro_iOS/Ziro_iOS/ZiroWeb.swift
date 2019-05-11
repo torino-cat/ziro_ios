@@ -236,6 +236,11 @@ class ZiroWeb {
         task.resume()
     }
     
+    func addComment(for taskId: String, withText text: String, withCompletion completion: @escaping (_ success: Bool, _ errors: [String]?, _ comment: Comment?) -> Void) {
+        let comment = Comment(["text": text, "leavingDate": "11.05.2019"])
+        completion(true, nil, comment)
+    }
+    
     func getPriors() -> [Int: String] {
         return [
             0:"Тривиальный",
