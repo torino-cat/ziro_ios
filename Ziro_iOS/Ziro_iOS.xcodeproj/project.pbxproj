@@ -19,6 +19,11 @@
 		EB1C0758223E7510008F1816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1C0756223E7510008F1816 /* LaunchScreen.storyboard */; };
 		EB91C09C227C6A5C0022A788 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91C09B227C6A5C0022A788 /* TasksViewController.swift */; };
 		EB91F0532279A5D700D5B756 /* ZiroWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91F0522279A5D700D5B756 /* ZiroWeb.swift */; };
+		F255481B22858EE4006E15CF /* ZTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255481A22858EE4006E15CF /* ZTask.swift */; };
+		F255481D2285B275006E15CF /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255481C2285B275006E15CF /* TaskDetail.swift */; };
+		F255481F2285B7C9006E15CF /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255481E2285B7C9006E15CF /* TaskDetailViewController.swift */; };
+		F25548212286CD7B006E15CF /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25548202286CD7B006E15CF /* LogsViewController.swift */; };
+		F25548232286DD74006E15CF /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25548222286DD74006E15CF /* CommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		EB1C0759223E7510008F1816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB91C09B227C6A5C0022A788 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		EB91F0522279A5D700D5B756 /* ZiroWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiroWeb.swift; sourceTree = "<group>"; };
+		F255481A22858EE4006E15CF /* ZTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTask.swift; sourceTree = "<group>"; };
+		F255481C2285B275006E15CF /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
+		F255481E2285B7C9006E15CF /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		F25548202286CD7B006E15CF /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		F25548222286DD74006E15CF /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,11 @@
 				EB0F1774227EE90E00C58D0C /* ProjectDetailViewController.swift */,
 				EB0F1776228016F900C58D0C /* AccountViewController.swift */,
 				EB0F17782280174700C58D0C /* AccountInfo.swift */,
+				F255481A22858EE4006E15CF /* ZTask.swift */,
+				F255481C2285B275006E15CF /* TaskDetail.swift */,
+				F255481E2285B7C9006E15CF /* TaskDetailViewController.swift */,
+				F25548202286CD7B006E15CF /* LogsViewController.swift */,
+				F25548222286DD74006E15CF /* CommentsViewController.swift */,
 			);
 			path = Ziro_iOS;
 			sourceTree = "<group>";
@@ -158,13 +173,18 @@
 			files = (
 				EB0F1773227ED40200C58D0C /* ProjectsViewController.swift in Sources */,
 				EB91F0532279A5D700D5B756 /* ZiroWeb.swift in Sources */,
+				F25548232286DD74006E15CF /* CommentsViewController.swift in Sources */,
 				EB0F1777228016F900C58D0C /* AccountViewController.swift in Sources */,
 				EB91C09C227C6A5C0022A788 /* TasksViewController.swift in Sources */,
 				EB0F1775227EE90E00C58D0C /* ProjectDetailViewController.swift in Sources */,
+				F255481D2285B275006E15CF /* TaskDetail.swift in Sources */,
+				F255481F2285B7C9006E15CF /* TaskDetailViewController.swift in Sources */,
 				EB1C0750223E750A008F1816 /* LoginViewController.swift in Sources */,
 				EB0F1771227ED12600C58D0C /* Project.swift in Sources */,
+				F255481B22858EE4006E15CF /* ZTask.swift in Sources */,
 				EB1C074E223E750A008F1816 /* AppDelegate.swift in Sources */,
 				EB0F17792280174700C58D0C /* AccountInfo.swift in Sources */,
+				F25548212286CD7B006E15CF /* LogsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

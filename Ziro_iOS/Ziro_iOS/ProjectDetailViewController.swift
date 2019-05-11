@@ -17,7 +17,6 @@ class ProjectDetailViewController: UITableViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var toDoLabel: UILabel!
     @IBOutlet weak var inProgressLabel: UILabel!
-    @IBOutlet weak var doneLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,6 @@ class ProjectDetailViewController: UITableViewController {
         descriptionLabel.text = project.description
         toDoLabel.text = "\(project.todoTaskCount) задач"
         inProgressLabel.text = "\(project.inProgressTaskCount) задач"
-        doneLabel.text = "\(project.doneTaskCount) задач"
     }
 
     // MARK: - Table view data source

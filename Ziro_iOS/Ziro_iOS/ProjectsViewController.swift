@@ -42,6 +42,8 @@ class ProjectsViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+            } else if let errors = errors {
+                self.handle(errors: errors)
             }
         }
     }
@@ -88,6 +90,8 @@ class ProjectsViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+            } else if let errors = errors {
+                self.handle(errors: errors)
             }
         }
     }

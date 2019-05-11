@@ -153,4 +153,96 @@ class ZiroWeb {
         }
         task.resume()
     }
+    
+    func getUserTasks(withCompletion completion: @escaping (_ success: Bool, _ errors: [String]?, _ projects: [ZTask]?) -> Void) {
+        
+        let taskUrl = URL(string: "\(ZiroWeb.api)/task/getCurrentTasks")!
+        let task = URLSession.shared.dataTask(with: taskUrl) { (data, response, error) in
+            if let error = error {
+                completion(false, [error.localizedDescription], nil)
+                return
+            }
+            print(response!)
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                completion(false, ["Операция завершена неудачно"], nil)
+                return
+            }
+            guard
+                let data = data,
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: []),
+                let responseData = responseJSON as? [String: Any]
+                else {
+                    completion(false, ["Данные не получены"], nil)
+                    return
+            }
+            let errors = responseData["errors"] as? [String]
+            if errors != nil {
+                completion(false, errors, nil)
+            }
+            guard
+                let dataNode = responseData["data"] as? [String: Any],
+                let taskNode = dataNode["tasks"] as? [[String: Any]]
+                else {
+                    completion(false, ["Некорректные данные"], nil)
+                    return
+            }
+            let tasks = taskNode.compactMap(ZTask.init)
+            completion(true, nil, tasks)
+        }
+        task.resume()
+    }
+    
+    func getTaskDetail(by taskId: String, withCompletion completion: @escaping (_ success: Bool, _ errors: [String]?, _ account: TaskDetail?) -> Void) {
+        let url = URL(string: "\(ZiroWeb.api)/task/getTaskDetails")!
+        
+        let json: [String: Any] = ["taskId": taskId]
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(false, [error.localizedDescription], nil)
+                return
+            }
+            print(response!)
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                completion(false, ["Операция завершена неудачно"], nil)
+                return
+            }
+            guard
+                let data = data,
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: []),
+                let responseData = responseJSON as? [String: Any]
+                else {
+                    completion(false, ["Данные не получены"], nil)
+                    return
+            }
+            let errors = responseData["errors"] as? [String]
+            if errors != nil {
+                completion(false, errors, nil)
+            }
+            guard
+                let dataNode = responseData["data"] as? [String: Any]
+                else {
+                    completion(false, ["Некорректные данные"], nil)
+                    return
+            }
+            let taskDetails = TaskDetail(dataNode)
+            completion(true, nil, taskDetails)
+        }
+        task.resume()
+    }
+    
+    func getPriors() -> [Int: String] {
+        return [
+            0:"Тривиальный",
+            1:"Низкий",
+            2:"Высокий",
+            3:"Критический",
+            4:"Блокирующий"
+        ]
+    }
 }
